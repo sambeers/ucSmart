@@ -3,8 +3,10 @@ ucSmart
 
 A more efficent version of the native ucwords function in php. In fuction.php you can see it looks for smaller words that you wouldn't normally want to have capitized automatically. You can edit this list or add entries that you specifically always want lowercase.
 
-~~~~include_once"function.php";~~~~
-~~~~echo ucSmart($string);~~~~
+```
+include_once"function.php";
+echo ucSmart($string);
+```
 
 Invoke the function above to capitalize a phrase but avoid having articles and conjuctions grouped in there. Best used for titles on a website. Using this makes the site/app look more professional because it's free of human error.
 
