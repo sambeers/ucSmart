@@ -1,18 +1,37 @@
 ucSmart
 =======
 
-A more efficent version of the native ucwords function in php. In fuction.php you can see it looks for smaller words that you wouldn't normally want to have capitized automatically. You can edit this list or add entries that you specifically always want lowercase.
+A more efficent version of the native ucwords function in php. Instead of capitalizing each string, it uses title-case, ignoring smaller 
+articles and conjunctions. In fuction.php you can see it looks for these words in a blacklist array. You can edit this list or add 
+additional entries that you specifically always want lowercase. I have found automating capitalization to be very helpful in my own work, it 
+really keeps things looking professional having your titles free of human error.
+
+
+Usage
+-----
 
 ```
 include_once"function.php";
 echo ucSmart($string);
 ```
+Include the script or paste the contents into your working file. Then invoke the "ucSmart" function to capitalize a phrase in title-case.
 
-Invoke the function above to capitalize a phrase but avoid having articles and conjuctions grouped in there. Best used for titles on a website. Using this makes the site/app look more professional because it's free of human error.
 
 Future Things
 -------------
 
-Ideally this will grow to something i can just wrap around any line of text i want to echo and have it figure out how to properly format it. With an additional value passed in to know whether to treat it as a title or body text.
+Eventually I'd like to grow this into something I can just wrap around any line of text and have it figure out how to properly 
+format it. Meaning that I'd like to be able to use this same automation for body-text as well. Something like capitalize the first word in a
+sentence as well as matches to a proper-nouns whitelist?
 
-I'm currently working on a way to add a list of words that should always be capitalized in a specific way too. Like the obligitory "jQuery" that this otherwise would write Jquery. These words should be accessable through an array and be easily modified by the developer.
+I'm currently working on a way to add a list of words that should always be capitalized in a specific/unusual way too. Like the obligitory 
+"jQuery" that this otherwise would write Jquery. Or your company name that's spelled like: CompanyName. These kinds of words should be accessable 
+through annother array and could be easily redefined by the developer.
+
+
+Donate
+------
+
+If you found this project usefull please consider sending a couple bucks my way as a thank you for the work :)
+
+[PayPal](https://paypal.me/sammurphey)
